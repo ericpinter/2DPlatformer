@@ -7,7 +7,6 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D body;
     Animator animator;
-    SpriteRenderer sr;
 
     bool jumping;
 
@@ -20,7 +19,6 @@ public class PlayerMove : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,11 +29,11 @@ public class PlayerMove : MonoBehaviour
 
         if(horizontal < 0)
 		{
-            sr.flipX = false;
+            this.gameObject.transform.localScale = new Vector3(-1,1, 1);
 		}
 		else
 		{
-            sr.flipX = true;
+            this.gameObject.transform.localScale = new Vector3(1,1,1);
 		}
 
         if(Input.GetKeyDown("space") && !jumping)
