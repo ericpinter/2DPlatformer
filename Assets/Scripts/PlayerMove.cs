@@ -29,11 +29,11 @@ public class PlayerMove : MonoBehaviour
 
         if(horizontal < 0)
 		{
-            this.gameObject.transform.localScale = new Vector3(-1,1, 1);
+            this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
 		}
-		else
+		else if(horizontal > 0)
 		{
-            this.gameObject.transform.localScale = new Vector3(1,1,1);
+            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
 		}
 
         if(Input.GetKeyDown("space") && !jumping)
