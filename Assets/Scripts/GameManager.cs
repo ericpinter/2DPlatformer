@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
     public GameObject events;
 
-    AudioSource sound;
 
     private Coroutine dialogCo;
 
@@ -34,16 +33,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gamePaused = false;
-        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!sound.isPlaying)
-        {
-            sound.Play();
-        }
 
     }
 
@@ -55,7 +49,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(canvas);
             DontDestroyOnLoad(events);
-            
+             
 		}
 		else
 		{
@@ -88,19 +82,19 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-    public void StartButon()
+    public void StartButton()
 	{
         flagsCollected = 0;
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         startButton.SetActive(false);
-        scoreBox.SetActive(true);
-
+        //scoreBox.SetActive(true);
+        StartCoroutine(LoadYourAsyncScene("FirstLevel"));
     }
 
     public void GameOver()
 	{
         startButton.SetActive(true);
-        scoreBox.SetActive(false);
+        //scoreBox.SetActive(false);
         StopAllCoroutines();
         HideDialog();
         StartCoroutine(ColorLerp(new Color(1, 1, 1, 1), 2));
