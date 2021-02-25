@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     public GameObject creditsButton;
     public GameObject backgroundImage;
 
-    public GameObject creditText;
+    public GameObject menuText;
     public GameObject backButton;
+
+    public GameObject controlsButton;
+
 
     public GameObject canvas;
     public GameObject events;
@@ -94,6 +97,7 @@ public class GameManager : MonoBehaviour
         startButton.SetActive(false);
         scoreText.SetActive(true);
         creditsButton.SetActive(false);
+        controlsButton.SetActive(false);
         //scoreBox.SetActive(true);
         StartCoroutine(LoadYourAsyncScene("FirstLevel"));
     }
@@ -102,17 +106,26 @@ public class GameManager : MonoBehaviour
     {
         startButton.SetActive(false);
         creditsButton.SetActive(false);
-        
+        controlsButton.SetActive(false);
+
         //scoreBox.SetActive(true);
         StartCoroutine(LoadYourAsyncScene("Credits"));
-
     }
 
+    public void ControlsButton()
+    {
+        startButton.SetActive(false);
+        creditsButton.SetActive(false);
+        controlsButton.SetActive(false);
+
+        //scoreBox.SetActive(true);
+        StartCoroutine(LoadYourAsyncScene("Controls"));
+    }
 
     public void ShowCredits(String credits)
     {
-        creditText.GetComponent<TextMeshProUGUI>().text = credits;
-        creditText.SetActive(true);
+        menuText.GetComponent<TextMeshProUGUI>().text = credits;
+        menuText.SetActive(true);
         backButton.SetActive(true);
     }
 
@@ -120,8 +133,9 @@ public class GameManager : MonoBehaviour
 	{
         startButton.SetActive(true);
         scoreText.SetActive(false);
-        creditText.SetActive(false);
+        menuText.SetActive(false);
         creditsButton.SetActive(true);
+        controlsButton.SetActive(true);
         backButton.SetActive(false);
         //scoreBox.SetActive(false);
         StopAllCoroutines();
