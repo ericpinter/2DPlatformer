@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         flagsCollected = 0;
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         startButton.SetActive(false);
+        scoreText.SetActive(true);
         //scoreBox.SetActive(true);
         StartCoroutine(LoadYourAsyncScene("FirstLevel"));
     }
@@ -94,6 +95,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
 	{
         startButton.SetActive(true);
+        scoreText.SetActive(false);
         //scoreBox.SetActive(false);
         StopAllCoroutines();
         HideDialog();
