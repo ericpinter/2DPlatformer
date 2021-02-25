@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         creditsButton.SetActive(false);
         controlsButton.SetActive(false);
         //scoreBox.SetActive(true);
-        StartCoroutine(LoadYourAsyncScene("FirstLevel"));
+        StartCoroutine(LoadYourAsyncScene(true,"FirstLevel"));
     }
 
     public void CreditsButton()
@@ -111,17 +111,18 @@ public class GameManager : MonoBehaviour
         controlsButton.SetActive(false);
 
         //scoreBox.SetActive(true);
-        StartCoroutine(LoadYourAsyncScene("Credits"));
+        StartCoroutine(LoadYourAsyncScene(false, "Credits"));
     }
 
     public void ControlsButton()
     {
+        StartCoroutine(LoadYourAsyncScene(false, "Controls"));
+
         startButton.SetActive(false);
         creditsButton.SetActive(false);
         controlsButton.SetActive(false);
 
         //scoreBox.SetActive(true);
-        StartCoroutine(LoadYourAsyncScene("Controls"));
     }
 
     public void ShowMenuText(String credits)
@@ -161,7 +162,7 @@ public class GameManager : MonoBehaviour
 		}
         sprite.color = endValue;
 	}
-    IEnumerator LoadYourAsyncScene(string scene)
+    IEnumerator LoadYourAsyncScene(bool lerp, string scene)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
 
@@ -170,7 +171,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 2));
+        if (lerp) {StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 2));}
 
     }
     public bool IsGameStarted()
