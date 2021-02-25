@@ -1694,6 +1694,10 @@ MonoBehaviour:
   creditsButton: {fileID: 2036409313}
   backgroundImage: {fileID: 1881834978}
   titleText: {fileID: 1215395040}
+  levels:
+  - Menu
+  - FirstLevel
+  - SecondLevel
   menuText: {fileID: 1013826996}
   backButton: {fileID: 154142049}
   controlsButton: {fileID: 978239857}

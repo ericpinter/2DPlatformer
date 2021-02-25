@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject backgroundImage;
     public GameObject titleText;
 
+    public String[] levels;
+    private int currentLevel = 0;
+
     public GameObject menuText;
     public GameObject backButton;
 
@@ -93,7 +96,6 @@ public class GameManager : MonoBehaviour
 
     public void StartButton()
 	{
-        flagsCollected = 0;
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         startButton.SetActive(false);
         scoreText.SetActive(true);
@@ -101,7 +103,7 @@ public class GameManager : MonoBehaviour
         creditsButton.SetActive(false);
         controlsButton.SetActive(false);
         //scoreBox.SetActive(true);
-        StartCoroutine(LoadYourAsyncScene(true,"FirstLevel"));
+        NextLevel();
     }
 
     public void CreditsButton()
@@ -132,6 +134,25 @@ public class GameManager : MonoBehaviour
         titleText.SetActive(false);
         backButton.SetActive(true);
     }
+
+    public void NextLevel()
+    {
+        flagsCollected = 0;
+        currentLevel++;
+        if (currentLevel >= levels.Length)
+        {
+            currentLevel = 0;
+            GameOver();
+            print("restarting");
+        }
+        else
+        {
+            StartCoroutine(LoadYourAsyncScene(true, levels[currentLevel]));
+            print("loading "+levels[currentLevel]);
+        }
+
+    }
+
 
     public void GameOver()
 	{
@@ -170,7 +191,6 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
-
         if (lerp) {StartCoroutine(ColorLerp(new Color(1, 1, 1, 0), 2));}
 
     }
@@ -192,7 +212,7 @@ public class GameManager : MonoBehaviour
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         if (flagsCollected == flagsTotal)
         {
-            GameOver();
+            NextLevel();
         }
 
     }
