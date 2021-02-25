@@ -39,6 +39,7 @@ public class PlayerMove : MonoBehaviour
 		{
             body.AddForce(new Vector2(0, jumpForce));
             jumping = true;
+            AudioManagerScript.PlaySound("Jump");
 		}
     }
 
