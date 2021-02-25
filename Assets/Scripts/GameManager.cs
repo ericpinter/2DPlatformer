@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
         scoreText.SetActive(false);
         creditText.SetActive(false);
         creditsButton.SetActive(true);
-        backButton.SetActive(true);
+        backButton.SetActive(false);
         //scoreBox.SetActive(false);
         StopAllCoroutines();
         HideDialog();
