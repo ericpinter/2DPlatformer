@@ -20,8 +20,8 @@ public class Flag : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.UpdateScore();
             this.gameObject.SetActive(false);
+            GameManager.Instance.UpdateScore();
         }
     }
 
