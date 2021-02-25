@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,11 @@ public class GameManager : MonoBehaviour
     public GameObject scoreBox;
     public GameObject scoreText;
     public GameObject startButton;
+    public GameObject creditsButton;
     public GameObject backgroundImage;
+
+    public GameObject creditText;
+    public GameObject backButton;
 
     public GameObject canvas;
     public GameObject events;
@@ -88,14 +93,36 @@ public class GameManager : MonoBehaviour
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         startButton.SetActive(false);
         scoreText.SetActive(true);
+        creditsButton.SetActive(false);
         //scoreBox.SetActive(true);
         StartCoroutine(LoadYourAsyncScene("FirstLevel"));
+    }
+
+    public void CreditsButton()
+    {
+        startButton.SetActive(false);
+        creditsButton.SetActive(false);
+        
+        //scoreBox.SetActive(true);
+        StartCoroutine(LoadYourAsyncScene("Credits"));
+
+    }
+
+
+    public void ShowCredits(String credits)
+    {
+        creditText.GetComponent<TextMeshProUGUI>().text = credits;
+        creditText.SetActive(true);
+        backButton.SetActive(true);
     }
 
     public void GameOver()
 	{
         startButton.SetActive(true);
         scoreText.SetActive(false);
+        creditText.SetActive(false);
+        creditsButton.SetActive(true);
+        backButton.SetActive(true);
         //scoreBox.SetActive(false);
         StopAllCoroutines();
         HideDialog();
