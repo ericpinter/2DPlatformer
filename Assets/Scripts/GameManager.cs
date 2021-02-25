@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     {
         flagsCollected++;
         Debug.Log("Plus one flag!");
-        //scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
+        scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         if (flagsCollected == flagsTotal)
         {
             GameOver();
