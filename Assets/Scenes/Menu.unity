@@ -1297,7 +1297,7 @@ MonoBehaviour:
   controlsButton: {fileID: 978239857}
   canvas: {fileID: 1282955035}
   events: {fileID: 193705125}
-  flagsTotal: 3
+  flagsTotal: 4
 --- !u!4 &1325257375
 Transform:
   m_ObjectHideFlags: 0
