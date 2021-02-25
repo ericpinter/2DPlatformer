@@ -9,6 +9,6 @@ public class Controls : MonoBehaviour
 
     void Start()
     {
-        GameManager.Instance.ShowCredits(controls);
+        GameManager.Instance.ShowMenuText(controls);
     }
 }

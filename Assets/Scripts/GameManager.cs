@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject startButton;
     public GameObject creditsButton;
     public GameObject backgroundImage;
+    public GameObject titleText;
 
     public GameObject menuText;
     public GameObject backButton;
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
         startButton.SetActive(false);
         scoreText.SetActive(true);
+        titleText.SetActive(false);
         creditsButton.SetActive(false);
         controlsButton.SetActive(false);
         //scoreBox.SetActive(true);
@@ -122,10 +124,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadYourAsyncScene("Controls"));
     }
 
-    public void ShowCredits(String credits)
+    public void ShowMenuText(String credits)
     {
         menuText.GetComponent<TextMeshProUGUI>().text = credits;
         menuText.SetActive(true);
+        titleText.SetActive(false);
         backButton.SetActive(true);
     }
 
@@ -134,6 +137,7 @@ public class GameManager : MonoBehaviour
         startButton.SetActive(true);
         scoreText.SetActive(false);
         menuText.SetActive(false);
+        titleText.SetActive(true);
         creditsButton.SetActive(true);
         controlsButton.SetActive(true);
         backButton.SetActive(false);
