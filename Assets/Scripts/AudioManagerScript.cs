@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManagerScript : MonoBehaviour
 {
-    public static AudioClip jumpSound;
+    public static AudioClip jumpSound, grabFlagSound;
     static AudioSource audioSrc;
 
 
@@ -12,6 +12,7 @@ public class AudioManagerScript : MonoBehaviour
     void Start()
     {
         jumpSound = Resources.Load<AudioClip>("Jump");
+        grabFlagSound = Resources.Load<AudioClip>("GrabFlag");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -27,6 +28,10 @@ public class AudioManagerScript : MonoBehaviour
         if (clip == "Jump")
         {
             audioSrc.PlayOneShot(jumpSound);
+        }
+        if (clip == "GrabFlag")
+        {
+            audioSrc.PlayOneShot(grabFlagSound);
         }
     }
 }

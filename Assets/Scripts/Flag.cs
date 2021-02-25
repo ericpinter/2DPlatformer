@@ -22,6 +22,7 @@ public class Flag : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             GameManager.Instance.UpdateScore();
+            AudioManagerScript.PlaySound("GrabFlag");
         }
     }
 
