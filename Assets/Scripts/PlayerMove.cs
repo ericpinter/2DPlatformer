@@ -25,15 +25,14 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("horizontal", horizontal);
 
         if(horizontal < 0)
 		{
-            this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            this.gameObject.transform.localScale = new Vector3(-0.6f, 0.6f, 1);
 		}
 		else if(horizontal > 0)
 		{
-            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            this.gameObject.transform.localScale = new Vector3(0.6f, 0.6f, 1);
 		}
 
         if(Input.GetKeyDown("space") && !jumping)
