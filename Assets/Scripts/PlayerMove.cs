@@ -66,7 +66,10 @@ public class PlayerMove : MonoBehaviour
         }
 
         body.velocity = new Vector2(horizontal * runSpeed, body.velocity.y);
-	}
+
+        if (body.position.y < -100) { GameManager.Instance.GameOver();}
+        
+    }
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
