@@ -43,7 +43,8 @@ Font : https://www.dafont.com/nasalization.font
 Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
 
 Contributions:
-Eric
+Eric implemented the system to switch between scenes, the very short third level, the idle animation
+for the player and the jetpack.
 Jonathan
 Andrew implemented the infinite scrolling and parallax background. He also
 implemented the flag animations and the sound for collecting flags. He
