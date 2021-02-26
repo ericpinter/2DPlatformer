@@ -45,7 +45,8 @@ Font : https://www.dafont.com/nasalization.font
 Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
 
 Contributions:
-Eric
+Eric implemented the system to switch between scenes, the very short third level, the idle animation
+for the player and the jetpack.
 Jonathon implemented a lot of the scripts, designed level one, and kept checking
 for bugs and details. Found the tile set that we used.
 Andrew implemented the infinite scrolling and parallax background. He also
