@@ -5,7 +5,8 @@ using UnityEngine;
 public class Controls : MonoBehaviour
 {
     private string controls =
-@"Use A to move left, D to move right, and the space bar to jump.";
+@"You're a part of the cleanup crew designated to remove all of the space trash on the path up to the moon.
+Use A to move left, D to move right. Press the space bar to jump and hold it to use your jetpack.";
 
     void Start()
     {

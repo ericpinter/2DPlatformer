@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(LoadYourAsyncScene(true, levels[currentLevel]));
             print("loading "+levels[currentLevel]);
         }
+        scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
 
     }
 

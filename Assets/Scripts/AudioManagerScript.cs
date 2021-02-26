@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManagerScript : MonoBehaviour
 {
     public static AudioClip jumpSound, grabFlagSound;
-    static AudioSource audioSrc;
+    public static AudioSource audioSrc;
 
 
     // Start is called before the first frame update
@@ -23,15 +23,20 @@ public class AudioManagerScript : MonoBehaviour
         
     }
 
-    public static void PlaySound(string clip)
+    public static void PlaySound(string clip, float time)
     {
+
+        AudioClip c = jumpSound;
         if (clip == "Jump")
         {
-            audioSrc.PlayOneShot(jumpSound);
+            c = jumpSound;
         }
-        if (clip == "GrabFlag")
+        else if (clip == "GrabFlag")
         {
-            audioSrc.PlayOneShot(grabFlagSound);
+            c = grabFlagSound;
         }
+        if (time>0) audioSrc.pitch = c.length / time;
+        audioSrc.PlayOneShot(c);
+        
     }
 }

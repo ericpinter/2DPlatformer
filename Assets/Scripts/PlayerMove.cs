@@ -14,11 +14,18 @@ public class PlayerMove : MonoBehaviour
 
     public float runSpeed = 5f;
     public float jumpForce = 400f;
+    public float jetpackForce = 10f;
+    public float jetpackTime = 3f;
+    private float jetpackChargeLeft;
+
+    private ParticleSystem jetpackParticles;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        jetpackChargeLeft = jetpackTime;
+        jetpackParticles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -39,17 +46,31 @@ public class PlayerMove : MonoBehaviour
 		{
             body.AddForce(new Vector2(0, jumpForce));
             jumping = true;
-            AudioManagerScript.PlaySound("Jump");
 		}
     }
 
 	private void FixedUpdate()
-	{
+    {
+        float jetpackImpulse = 0f;
+        if (jumping && Input.GetKey("space") && jetpackChargeLeft > 0f)
+        {
+            jetpackImpulse = jetpackForce;
+            jetpackChargeLeft -= Time.fixedUnscaledDeltaTime;
+            body.AddForce(new Vector2 (0,jetpackForce));
+            jetpackParticles.Emit(new ParticleSystem.EmitParams(), 5);
+            if (!AudioManagerScript.audioSrc.isPlaying) AudioManagerScript.PlaySound("Jump", jetpackTime);
+        }
+        else
+        {
+            AudioManagerScript.audioSrc.Stop();
+        }
+
         body.velocity = new Vector2(horizontal * runSpeed, body.velocity.y);
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
         jumping = false;
-	}
+        jetpackChargeLeft = jetpackTime;
+    }
 }
