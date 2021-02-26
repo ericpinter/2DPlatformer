@@ -1,0 +1,50 @@
+Jonathan Qualls
+Eric Pinter
+Andrew Eveld
+
+2D Platformer Evaluation Document
+
+The intent of our game is to collect all of the colorful flags while jet-packing
+through moon platforms. We intended this to be a moderately challenging and
+simple platformer.
+
+The narrative of our game is that you are part of a cleanup crew. Your goal is
+to pick up some flags that vandals have left scattered across the moon trail.
+You need to pick up all of the flags before the big name tourists go moon
+hiking.
+
+To move the player, you can use the "A" key to move left and the "D" key to move
+right. The player has a jetpack, which you can activate with the spacebar. The
+jetpack accelerates you upward allowing you to jump really high and also slow
+your descent. All of the platforms are one-way platforms. The player collects
+flags by colliding with them. Each level progresses once all of the flags are
+collected.
+
+The player is a minimalistic cartoon astronaut. The astronaut has an idle
+animation of swinging his arms. The platforms, flags, and info box are also a
+simple cartoon style. The background is a two-layer parallax background with
+stars scattered throughout. We used a font that was reminiscent of NASA's font,
+which paired with our art style very well.
+
+Joys:
+We found really nice artwork, fonts and backgrounds to work with. It's relieving
+to have a clear style early on.
+
+Struggles:
+The platforms' behavior was difficult to get exactly right.
+
+Sources
+
+Starry Background: https://opengameart.org/content/starfield-background
+Second layer of background: https://opengameart.org/content/3-layer-parallax-star-and-nebula-field
+Tile Set: https://opengameart.org/content/platformer-art-deluxe
+Astronaut sprite: https://opengameart.org/content/astronaut-2
+Font : https://www.dafont.com/nasalization.font
+Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
+
+Contributions:
+Eric
+Jonathan
+Andrew implemented the infinite scrolling and parallax background. He also
+implemented the flag animations and the sound for collecting flags. He
+wrote the text for signs and designed level two.
