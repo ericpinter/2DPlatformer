@@ -1,4 +1,4 @@
-Jonathan Qualls
+Jonathon Qualls
 Eric Pinter
 Andrew Eveld
 
@@ -28,10 +28,12 @@ which paired with our art style very well.
 
 Joys:
 We found really nice artwork, fonts and backgrounds to work with. It's relieving
-to have a clear style early on.
+to have a clear style early on. Thinking of a fun story as to why you are picking
+up these flags.
 
 Struggles:
-The platforms' behavior was difficult to get exactly right.
+The platforms' behavior was difficult to get exactly right. Figuring out which tile
+from the tile set was the right one that needed to be used.
 
 Sources
 
@@ -44,7 +46,8 @@ Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
 
 Contributions:
 Eric
-Jonathan
+Jonathon implemented a lot of the scripts, designed level one, and kept checking
+for bugs and details. Found the tile set that we used.
 Andrew implemented the infinite scrolling and parallax background. He also
 implemented the flag animations and the sound for collecting flags. He
 wrote the text for signs and designed level two.
