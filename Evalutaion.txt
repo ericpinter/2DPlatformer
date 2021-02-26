@@ -34,6 +34,10 @@ up these flags.
 Struggles:
 The platforms' behavior was difficult to get exactly right. Figuring out which tile
 from the tile set was the right one that needed to be used.
+Animation seemed to be a lot of effort for how much it contributed to the end product.
+Maybe for a game where there are more characters (and they are closer to the screen)
+or even for 3D projects it is worth it. However for this project almost all of 
+the personality comes from the sprite choice instead of the ways that they move.
 
 Sources
 
