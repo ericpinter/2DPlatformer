@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9208415532830706424, guid: d337d5c52ee6e43a7a3067176ba68147, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9208415532830706424, guid: d337d5c52ee6e43a7a3067176ba68147, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13850,7 +13850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023289295078948701, guid: 77de73c39bc874780affe52460145740, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1023289295078948701, guid: 77de73c39bc874780affe52460145740, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13985,6 +13985,68 @@ Transform:
   m_Father: {fileID: 953905012}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1005892034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6643871386093706069, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: myText
+      value: You'll have to hold spacebar and use your jetpack to get all the way
+        up there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706071, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_Name
+      value: Sign (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643871386093706075, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00621e09de83d47c79c7caa447f84ce6, type: 3}
 --- !u!1 &1085056093
 GameObject:
   m_ObjectHideFlags: 0
@@ -14517,7 +14579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4691402737694173086, guid: 0082fbd42efe44ef8a8a758330bc00c6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4691402737694173086, guid: 0082fbd42efe44ef8a8a758330bc00c6, type: 3}
       propertyPath: m_LocalPosition.x

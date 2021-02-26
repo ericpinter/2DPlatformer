@@ -10,7 +10,8 @@ Second layer of background: https://opengameart.org/content/3-layer-parallax-sta
 Tile Set: https://opengameart.org/content/platformer-art-deluxe
 Astronaut sprite: https://opengameart.org/content/astronaut-2
 Font : https://www.dafont.com/nasalization.font
-Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a";
+Sounds: https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
+US flag image : https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg ";
 
     void Start()
     {
