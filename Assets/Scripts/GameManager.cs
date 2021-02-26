@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
     private Coroutine dialogCo;
 
     private int flagsCollected;
-    public int flagsTotal;
+    public int[] flagsInLevel;
+    private int flagsTotal;
 
     private bool gamePaused;
 
@@ -147,11 +148,20 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            flagsTotal = flagsInLevel[currentLevel];
             StartCoroutine(LoadYourAsyncScene(true, levels[currentLevel]));
             print("loading "+levels[currentLevel]);
         }
         scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
 
+    }
+
+    public void ReloadLevel()
+    {
+        flagsCollected = 0;
+        StartCoroutine(LoadYourAsyncScene(true, levels[currentLevel]));
+        print("loading " + levels[currentLevel]);
+        scoreText.GetComponent<TextMeshProUGUI>().text = flagsCollected + "/" + flagsTotal;
     }
 
 
@@ -168,6 +178,14 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
         HideDialog();
         StartCoroutine(ColorLerp(new Color(1, 1, 1, 1), 2));
+    }
+
+    public void EndScreen()
+    {
+        backButton.SetActive(true);
+        StopAllCoroutines();
+        HideDialog();
+        StartCoroutine(ColorLerp(new Color(1, 1, 1, 1), .5f));
     }
 
     IEnumerator ColorLerp(Color endValue, float duration)
